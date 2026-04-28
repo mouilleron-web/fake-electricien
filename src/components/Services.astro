@@ -1,0 +1,59 @@
+---
+const services = [
+  {
+    title: "Installation électrique",
+    description: "Conception et réalisation d'installations électriques complètes pour constructions neuves, conforme aux normes NF C 15-100.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 0h.008v.008h-.008V7.5z" />`,
+  },
+  {
+    title: "Rénovation & normes",
+    description: "Mise aux normes de votre installation existante, remplacement de tableaux vétustes, mise en sécurité de votre logement.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.1-5.1m0 0L11.42 4.97m-5.1 5.1H21M3 21h18" /><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />`,
+  },
+  {
+    title: "Dépannage urgent",
+    description: "Intervention rapide en cas de panne, court-circuit, disjonction. Disponible 7j/7 sur Grenoble et son agglomération.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />`,
+  },
+  {
+    title: "Domotique & éclairage",
+    description: "Solutions de maison connectée, éclairage LED intelligent, volets roulants motorisés, bornes de recharge véhicule électrique.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />`,
+  },
+];
+---
+
+<section class="bg-cloud py-20 md:py-28">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-blue font-semibold mb-3 text-sm tracking-[0.2em] uppercase">Ce que nous faisons</p>
+      <h2 class="text-3xl md:text-4xl font-extrabold">Nos domaines d'expertise</h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {services.map((service) => (
+        <div class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-cloud-dark hover:border-blue-light/30">
+          <div class="w-14 h-14 bg-blue/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue/20 transition-colors duration-300">
+            <svg class="w-7 h-7 text-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <Fragment set:html={service.icon} />
+            </svg>
+          </div>
+          <h3 class="font-heading text-lg font-bold mb-2">{service.title}</h3>
+          <p class="text-slate text-sm leading-relaxed">{service.description}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-12">
+      <a
+        href="/services"
+        class="inline-flex items-center gap-2 text-blue font-semibold hover:text-blue-light transition-colors duration-200"
+      >
+        Tous nos services
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,52 @@
+---
+import heroImg from '../assets/images/hero-electricien.jpg';
+---
+
+<section class="relative min-h-screen flex items-center">
+  <div class="absolute inset-0">
+    <img
+      src={heroImg.src}
+      alt="Électricien professionnel intervenant sur un tableau électrique"
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-midnight/90 via-midnight/70 to-midnight/40"></div>
+  </div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-6 py-32">
+    <div class="max-w-2xl">
+      <p class="text-electric font-semibold mb-4 text-sm tracking-[0.2em] uppercase">
+        Électricien certifié — Grenoble & agglomération
+      </p>
+      <h1 class="font-heading text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-white">
+        Votre électricien de <span class="text-electric">confiance</span> depuis 2018
+      </h1>
+      <p class="text-xl text-white/80 leading-relaxed mb-10 max-w-xl font-light">
+        Installation, rénovation, dépannage. Intervention rapide,
+        devis gratuit, travail soigné et garanti.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center px-8 py-4 bg-electric text-midnight font-bold rounded-xl hover:bg-electric-dark transition-colors duration-200 shadow-lg shadow-electric/20"
+        >
+          Demander un devis
+        </a>
+        <a
+          href="/services"
+          class="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:border-electric hover:text-electric transition-colors duration-200"
+        >
+          Nos services
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="bg-electric py-4">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-midnight font-bold text-center">
+    <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+    </svg>
+    <span>Panne électrique ? Appelez-nous au <a href="tel:0476000000" class="underline">04 76 00 00 00</a> — Intervention 7j/7</span>
+  </div>
+</div>

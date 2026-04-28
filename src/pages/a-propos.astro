@@ -1,0 +1,159 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import PageHero from '../components/PageHero.astro';
+import Footer from '../components/Footer.astro';
+
+import electricienImg from '../assets/images/electricien-travail.jpg';
+import chantierImg from '../assets/images/chantier.jpg';
+---
+
+<Layout title="L'entreprise — Éclat Électricité">
+  <Header />
+  <main>
+    <PageHero title="L'entreprise" subtitle="Qui sommes-nous ?" />
+
+    <section class="bg-cloud py-20 md:py-28">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center gap-12 mb-20">
+          <div class="md:w-1/2">
+            <h2 class="font-heading text-2xl md:text-3xl font-bold mb-6">Un électricien passionné</h2>
+            <p class="text-slate leading-relaxed mb-4">
+              Marc Laurent a fondé Éclat Électricité en 2018, après 10 ans d'expérience
+              chez un grand installateur de la région grenobloise. Son objectif : offrir
+              un service de proximité, réactif et de qualité artisanale.
+            </p>
+            <p class="text-slate leading-relaxed">
+              Formé aux dernières technologies (domotique, bornes de recharge, éclairage LED),
+              Marc allie savoir-faire traditionnel et solutions modernes pour répondre
+              à tous vos besoins électriques.
+            </p>
+          </div>
+          <div class="md:w-1/2">
+            <div class="rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src={electricienImg.src}
+                alt="Électricien professionnel au travail sur un chantier"
+                class="w-full h-80 object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+          <div class="md:w-1/2">
+            <h2 class="font-heading text-2xl md:text-3xl font-bold mb-6">Nos certifications</h2>
+            <p class="text-slate leading-relaxed mb-6">
+              La sécurité de vos installations est notre priorité. C'est pourquoi nous
+              maintenons les certifications les plus exigeantes du métier.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-cloud-dark">
+                <p class="font-heading font-bold text-blue text-lg mb-1">Qualifelec</p>
+                <p class="text-slate text-xs">Qualification professionnelle</p>
+              </div>
+              <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-cloud-dark">
+                <p class="font-heading font-bold text-blue text-lg mb-1">RGE</p>
+                <p class="text-slate text-xs">Reconnu Garant Environnement</p>
+              </div>
+              <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-cloud-dark">
+                <p class="font-heading font-bold text-blue text-lg mb-1">Décennale</p>
+                <p class="text-slate text-xs">Assurance garantie 10 ans</p>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/2">
+            <div class="rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src={chantierImg.src}
+                alt="Chantier électrique en cours de réalisation"
+                class="w-full h-80 object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-cloud-dark py-16 md:py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="font-heading text-3xl md:text-4xl font-bold">Nos valeurs</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center p-8">
+            <div class="w-16 h-16 bg-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+              </svg>
+            </div>
+            <h3 class="font-heading text-xl font-bold mb-3">Fiabilité</h3>
+            <p class="text-slate text-sm leading-relaxed">
+              Nous respectons nos engagements : délais, devis, qualité.
+              Chaque intervention est réalisée dans les règles de l'art.
+            </p>
+          </div>
+          <div class="text-center p-8">
+            <div class="w-16 h-16 bg-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+              </svg>
+            </div>
+            <h3 class="font-heading text-xl font-bold mb-3">Sécurité</h3>
+            <p class="text-slate text-sm leading-relaxed">
+              La sécurité n'est pas négociable. Toutes nos installations
+              sont conformes aux normes en vigueur et certifiées.
+            </p>
+          </div>
+          <div class="text-center p-8">
+            <div class="w-16 h-16 bg-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+              </svg>
+            </div>
+            <h3 class="font-heading text-xl font-bold mb-3">Proximité</h3>
+            <p class="text-slate text-sm leading-relaxed">
+              Basés à Grenoble, nous intervenons sur toute l'agglomération.
+              Un interlocuteur unique, disponible et à l'écoute.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-midnight py-16 md:py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-10">
+          <h2 class="font-heading text-2xl md:text-3xl font-bold text-white">Zone d'intervention</h2>
+          <p class="text-slate-light mt-2">Grenoble et son agglomération — rayon de 30 km</p>
+        </div>
+        <div id="map" class="w-full h-72 md:h-96 rounded-2xl z-0" role="img" aria-label="Carte de la zone d'intervention autour de Grenoble"></div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<script is:inline>
+  (function() {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+    document.head.appendChild(link);
+
+    var script = document.createElement('script');
+    script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+    script.onload = function() {
+      var map = L.map('map').setView([45.1885, 5.7245], 12);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        maxZoom: 19,
+      }).addTo(map);
+      L.marker([45.1885, 5.7245]).addTo(map)
+        .bindPopup('Éclat Électricité<br>12 avenue de la Technologie, Grenoble')
+        .openPopup();
+    };
+    document.body.appendChild(script);
+  })();
+</script>
